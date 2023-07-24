@@ -13,7 +13,6 @@ import { theme as defaultTheme } from '@chakra-ui/theme';
 import moment from 'moment';
 import { useAccount } from 'wagmi';
 
-import { CONSTANTS_VEVARA } from '@/config/constants';
 import { ILockDuration, IInputPercentage, Token } from '@/interfaces';
 import generateToast from '@/components/toast/generateToast';
 import { useBaseAssetStore } from '@/store/baseAssetsStore';
@@ -23,8 +22,6 @@ import callContractWait from '@/lib/callContractWait';
 import { useBaconTokenStore } from '@/store/baconTokenStore';
 import { useUsttTokenStore } from '@/store/usttTokenStore';
 import { useVaultSwapStore } from '@/store/vaultSwapStore';
-
-const { VALUE_PRECENTAGES, LOCK_DURATIONS } = CONSTANTS_VEVARA;
 
 const Dashboard = () => {
   const [usttDepositAmount, setUsttDepositAmount] = useState('');
@@ -334,7 +331,7 @@ const Dashboard = () => {
               py={'12px'}
               h={58}
               onClick={onDepositUsttAndBacon}
-              isLoading={isLoading}
+              isDisabled={isLoading}
               loadingText="Processing"
               // isDisabled={!!amountError}
             >
@@ -407,7 +404,7 @@ const Dashboard = () => {
               py={'12px'}
               h={58}
               onClick={onWithdrawUsttAndBacon}
-              isLoading={isLoading}
+              isDisabled={isLoading}
               loadingText={'processing'}
               // isDisabled={!!amountError}
             >
@@ -459,7 +456,7 @@ const Dashboard = () => {
                 py={'12px'}
                 h={58}
                 onClick={onSwap}
-                isLoading={isLoading}
+                isDisabled={isLoading}
                 loadingText={'processing'}
                 // isDisabled={!!amountError}
               >
