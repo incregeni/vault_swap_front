@@ -1,0 +1,147 @@
+/*- 
+  SQUID CSS ADVANCED CONFIG
+  #squid-widget 
+  #squid-swap-source (the container)
+- #squid-swap-destination (the container)
+- #squid-widget-header (the container)
+- #squid-icon-button (the button, on the header for example)
+- #squid-dropdown-btn (button container)
+- #squid-dropdown-label (text)
+- #squid-dropdown-icon (image)
+- #squid-swap-direction-txt (text container)
+- #squid-submit-swap-btn (btn container)
+- #squid-header-logo (logo container)
+- #squid-header-title (text)
+*/
+
+/** Brand Colors */
+
+#squid-widget {
+  --brand-blue: #1f2e64;
+  --brand-border-blue: #2b408b;
+  --brand-darkblue: #141e3f;
+  --brand-yellow:#FFBD59;
+  --brand-pink: #CD74CC;
+  --brand-green: #70DD88;
+  --brand-gray: #718096;
+}
+
+#squid-widget,
+#squid-widget-header {
+  --tw-bg-opacity: 1;
+  background-color: transparent !important;
+}
+
+/* #squid-swap-source,
+#squid-swap-destination{
+  --tw-bg-opacity: 1;
+  background-color: var(--brand-blue) !important;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  border-color: var(--brand-border-blue) !important;
+  margin-bottom: 0.5rem;
+} */
+
+#squid-header-title,
+#squid-dropdown-label,
+#squid-swap-direction-txt {
+  font-family: 'Arista' !important;
+}
+
+#squid-header-title{
+  color: white !important
+}
+
+#squid-widget {
+  min-width: -webkit-fill-available !important;
+  /* min-width: 100%; */
+  /* max-width: 440px !important; */
+  /* display: flex;
+  justify-content: center; */
+  
+}
+
+#squid-submit-swap-btn {
+  background: linear-gradient(to right, var(--brand-pink), var(--brand-yellow), var(--brand-green)) !important;
+}
+
+#squid-submit-swap-btn:disabled {
+  opacity: 0.5;
+  color: white
+}
+
+
+#squid-widget .tw-bg-primary {
+  background: linear-gradient(to right, var(--brand-pink), var(--brand-yellow), var(--brand-green)) !important;
+  color: var(--brand-darkblue) !important;
+  /* border-radius: 1rem !important; */
+    
+  text-transform: none !important;
+  border: 1px solid !important;
+  
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+} 
+#squid-widget .tw-bg-primary:hover{
+  scale: 1.15;
+  /* background: #FFBD59 */
+}
+
+#squid-widget .tw-rounded-dropdown {
+  vertical-align: middle !important;
+  /* border: 1px solid var(--brand-gray) !important; */
+}
+
+
+
+#squid-widget .tw-bg-base-300 {
+  /* border: 1px solid #2b408b !important; */
+  border-radius: 0.5rem !important;
+}
+
+#squid-primary-hover-button {
+  border-color: var(--brand-yellow) !important;
+  color: var(--brand-yellow) !important;
+}
+
+#squid-widget .tw-dsw-btn{
+  /* border: 1px solid var(--brand-gray) !important; */
+  border-radius: 0.5rem !important;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+#squid-widget .tw-dsw-btn:hover{
+  scale: 1.1;
+}
+
+#squid-widget .tw-dsw-toggle-secondary:checked{
+  box-shadow: var(--handleoffset) 0 0 2px var(--brand-blue) inset, 0 0 0 2px var(--brand-blue) inset !important;
+  background-color: var(--brand-yellow) !important;
+  border: 1px solid var(--brand-yellow) !important;
+
+}
+#squid-widget .tw-dsw-toggle-secondary{
+  /* background-color: var(--brand-yellow) !important; */
+  border: 1px solid var(--brand-gray) !important;
+  /* border-color: var(--brand-gray); */
+}
+
+#squid-widget .tw-rounded-dropdown:hover {
+  border-color: var(--brand-yellow) !important;
+  color: #FFBD59 !important;
+  scale: 1;
+}
+
+#squid-widget .tw-overflow-auto{
+  overflow-y:scroll !important
+}
+#squid-widget .tw-overflow-auto::-webkit-scrollbar{
+  display: none !important
+}

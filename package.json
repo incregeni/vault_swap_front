@@ -1,0 +1,52 @@
+{
+  "name": "equilibre-v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@0xsquid/widget": "^1.5.3",
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@rainbow-me/rainbowkit": "1.0.0",
+    "@tanstack/react-table": "^8.9.3",
+    "@types/lodash.merge": "^4.6.7",
+    "@types/node": "18.16.3",
+    "@types/react": "18.2.4",
+    "@types/react-dom": "18.2.3",
+    "@types/react-table": "^7.7.14",
+    "@wagmi/cli": "^1.1.0",
+    "@wagmi/connectors": "^2.3.0",
+    "@web3modal/ethereum": "^2.4.1",
+    "@web3modal/react": "^2.4.1",
+    "axios": "^1.4.0",
+    "bignumber.js": "^9.0.1",
+    "date-fns": "^2.30.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.4",
+    "ethers": "^5.7.2",
+    "framer-motion": "^10.12.16",
+    "lodash.merge": "^4.6.2",
+    "moment": "^2.29.4",
+    "next": "13.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
+    "react-lorem-component": "^0.13.0",
+    "simple-zustand-devtools": "^1.1.0",
+    "typescript": "5.0.4",
+    "viem": "^0.3.40",
+    "wagmi": "^1.2.1",
+    "zukeeper": "^1.0.2",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0"
+  }
+}
