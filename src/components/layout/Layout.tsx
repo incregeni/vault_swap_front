@@ -37,18 +37,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { address, isConnected } = useAccount();
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const mounted = useIsMounted();
-  const { initBaseAssets, isLoading } = useBaseAssetStore(state => ({
-    initBaseAssets: state.actions.initBaseAssets,
-    isLoading: state.isLoading,
-  }));
-  const { initPairs } = usePairStore(state => ({
-    initPairs: state.actions.initPairs,
-  }));
-  const { initGlobalData } = useGlobalStateStore(state => ({
-    initGlobalData: state.actions.initGlobalData,
-  }));
 
-  const { fetUstt, fetVaultSwapVal } = useUsttTokenStore(state => ({
+  const { fetUstt } = useUsttTokenStore(state => ({
     fetUstt: state.actions.fetBalanceAndAllowance,
     fetVaultSwapVal: state.actions.fetVaultSwapBal,
   }));
@@ -64,12 +54,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     fetBacon(address);
     fetPosition(address);
   }, [address, isConnected]);
-
-  useEffect(() => {
-    initBaseAssets();
-    initPairs();
-    initGlobalData();
-  }, []);
 
   return mounted ? (
     <>
@@ -132,7 +116,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         alignItems={'center'}
         display={'flex'}
         textColor={'white'}>
-        {isLoading ? <Spinner /> : children}
+        {children}
       </Container>
     </>
   ) : (
